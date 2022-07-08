@@ -1,3 +1,3 @@
 # YandexMapsMobile
 
-A description of this package.
+SPM for YandexMapsMobile 4.0.0
