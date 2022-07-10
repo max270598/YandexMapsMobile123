@@ -20,5 +20,17 @@ let package = Package(
             url: "https://github.com/max270598/YandexMapsMobileZip/releases/download/2.0.0/YandexMapsMobile.xcframework.zip",
             checksum: "2af1813d655ac552f84fb3e733cbae8aec8428db69081289cae357278641efc8"
         ),
+  	.target(
+            name: "YandexMapsMobile",
+            dependencies: [
+                .target(name: "YandexMapsMobile"),
+            ],
+            linkerSettings: [
+                .linkedFramework("CoreLocation"),
+                .linkedFramework("CoreTelephony"),
+                .linkedFramework("SystemConfiguration"),
+                .linkedLibrary("c++"),
+                .unsafeFlags(["-ObjC"]),
+            ]),
     ]
 )
